@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Tourism App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>App Introduction</ion-card-title>
+    <img src="assets/galwayMain.png" alt="galway-Image">
+  </ion-card-header>
+
+  <ion-card-content>
+    This is an application for people visiting Galway and the surrounding area.
+    We have multiple sections dedicated to different things to do during your stay
+    such as:
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Activities</ion-card-title>
+    <img src="assets/Activities-Page.png" alt="activities-Image">
+  </ion-card-header>
+
+  <ion-card-content>
+    Clicking the button below will take you to a page containing activites you can take part in
+    during your stay.
+  </ion-card-content>
+  <ion-button fill="clear" (click)="activities()">Activities</ion-button>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Foods</ion-card-title>
+    <img src="assets/irishBreakfast.png" alt="food-Image">
+  </ion-card-header>
+
+  <ion-card-content>
+    Clicking the button below will take you to a page detailing all of the different and variety
+    of foods that you can find in Galway.
+  </ion-card-content>
+  <ion-button fill="clear" (click)="food()">Foods</ion-button>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Nightlife</ion-card-title>
+    <img src="assets/nightlife.png" alt="nightlife-Image">
+  </ion-card-header>
+
+  <ion-card-content>
+    Clicking the button below will take you to a page showing you the wild and exciting nightlife
+    to be found in the heart of the city!
+  </ion-card-content>
+  <ion-button fill="clear" (click)="nightlife()">Nightlife</ion-button>
+</ion-card>
+
+</ion-content>
+
+
