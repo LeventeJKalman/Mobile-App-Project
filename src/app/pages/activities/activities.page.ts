@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './activities.page.html',
   styleUrls: ['./activities.page.scss'],
 })
+
 export class ActivitiesPage {
+
 
 }
