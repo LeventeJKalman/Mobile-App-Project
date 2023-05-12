@@ -8,5 +8,22 @@
 </ion-header>
 
 <ion-content>
-  
+  <ion-card>
+    <ion-item lines="none">
+      <p>Today's Weather Report</p>
+      <ion-label slot="end">{{todayDate | date:"EEE dd MMM"}}</ion-label><!--Date formmating-->
+    </ion-item>
+    <ion-item>
+      <span>
+        {{(weatherTemp?.temp - 273.15).toFixed()}} Degrees Celsius
+      </span>      
+      <img [src]="weatherIcon" slot="end">
+
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="location"></ion-icon>
+      <span>{{cityName}}</span>
+    </ion-item>
+  </ion-card>
 </ion-content>
