@@ -21,7 +21,7 @@ export class WeatherPage {
 
 
   constructor(private service: WeatherAPIService, public HttpClient:HttpClient) { 
-    this.loadData()
+    this.loadData()//calls the loadData function
   }  
   
   loadData(){
@@ -34,7 +34,5 @@ export class WeatherPage {
       this.weatherIcon = `http://openweathermap.org/img/wn/${this.weatherDetails.icon}@4x.png`;//get the icon of the weather from the website
       //console.log(this.weatherDetails);//line for testing variables to make sure that the correct data is displayed
     })
-
   }
-
 }

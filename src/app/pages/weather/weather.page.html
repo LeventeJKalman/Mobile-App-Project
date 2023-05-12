@@ -7,6 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
+<!--Card to display the weather in Galway-->
 <ion-content>
   <ion-card>
     <ion-item lines="none">
@@ -15,15 +16,28 @@
     </ion-item>
     <ion-item>
       <span>
-        {{(weatherTemp?.temp - 273.15).toFixed()}} Degrees Celsius
+        {{(weatherTemp?.temp - 273.15).toFixed(0)}} Degrees Celsius<!--weather from kelvin to Celsius-->
       </span>      
-      <img [src]="weatherIcon" slot="end">
-
+      <img [src]="weatherIcon" slot="end"><!--weather icon-->
     </ion-item>
-
     <ion-item>
       <ion-icon name="location"></ion-icon>
       <span>{{cityName}}</span>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <span>Maximum Temperature</span>
+      <span slot="end">{{(weatherTemp?.temp_max - 273.15).toFixed(0)}}</span><!--maximum temperature and converts it to celsius-->
+    </ion-item>
+    <ion-item>
+        <span>Minimum Temperature</span>
+        <span slot="end">{{(weatherTemp.temp_min - 273.15).toFixed(0)}}</span><!--minimum temperature and converts it to celsius-->
+    </ion-item>
+    <ion-item>
+      <span>Humidity</span>
+      <span slot="end">{{weatherTemp.humidity}} %</span><!--Gets the humidity-->
     </ion-item>
   </ion-card>
 </ion-content>
